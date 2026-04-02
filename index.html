@@ -65,15 +65,18 @@ h1, h2, h3, .title-font {
   flex-direction: column;
   background: var(--dark);
   position: relative;
+  overflow: hidden; /* important pour couper l’image */
 }
 
 .cover-bg-img {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center center;
+  object-fit: cover;      /* 🔥 recadrage automatique */
+  object-position: center; /* ajuste le focus */
+  z-index: 0;
 }
 
 /* overlay dégradé pour lisibilité */
